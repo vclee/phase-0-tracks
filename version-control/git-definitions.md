@@ -1,6 +1,6 @@
 # Git Definitions
 
-**Instructions: ** Define each of the following Git concepts.
+**Instructions:**  Define each of the following Git concepts.
 
 * What is version control?  Why is it useful?
 
@@ -10,7 +10,7 @@
   A branch in git is a copy of the project you are working on. It allows a user to make changes and progress on the project while preserving the integrity of the master branch/project.
 
 * What is a commit? What makes a good commit message?
-  A commit is creating a save point in your version control in which you can revert back to as needed. A good commit message would be one that describes the changes made during that new edit.
+  A commit is creating a save point in your version control in which you can revert back to as needed. A good commit message would be one that describes the changes made during that new edit, and should be written in present-tense and imperative style.
 
 * What is a merge conflict?
 
