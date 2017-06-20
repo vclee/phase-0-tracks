@@ -1,0 +1,35 @@
+
+
+header {
+  background-color: #094074;
+  text-align: center;
+  font-family: 'Crimson Text', serif;
+  padding: .5cm;
+}
+
+.column-1 {
+  background-color: #FFDD4A;
+  display: inline-block;
+  width: 49%;
+  font-family: 'Crimson Text', serif;
+}
+
+.column-2 {
+  background-color: #FE9000;
+  display: inline-block;
+  width: 49%;
+  vertical-align: top;
+  padding-bottom: 30px;
+  font-family: 'Crimson Text', serif;
+}
+
+footer {
+  background: #5ADBFF;
+  font-family: 'Crimson Text', serif;
+  text-align: center;
+
+}
+
+h2 {
+  text-align: center;
+}
