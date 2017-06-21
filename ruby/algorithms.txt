@@ -1,0 +1,44 @@
+Release 0:
+-Ask user which floor they want to be on
+-Approach elevator
+-If input floor is higher than current floor
+  -press up button
+-otherwise
+  -press down button
+-wait for elevator doors to open
+-enter elevator
+  -press the # button that corresponds to inpug floorq
+-wait for doors to close
+-until current floor is the input floor
+  -stay in elevator
+-exit elevator when current floor is input floor
+
+
+Release 1: How to make phone call:
+
+input: phone number
+
+-pick up phone
+  -if there is a dial tone:
+    -press each digit of the input on phone
+    -if busy tone
+      -hang up
+      -wait 5 minutes
+      -repeat all of the above
+    -if nobody answered and there is voicemail option
+      -leave voicemail
+      -hang up
+      -wait 30 minutes
+      -repeat all of the above
+    -if ringing more than 3 minutes and no voicemail or answer
+      -hang up
+      -wait 30 minutes
+      -repeat all of the above
+    -if someone answers
+      -talk to person
+  -if there is no dial tone:
+    -call phone company
+-hang up
+
+
+
