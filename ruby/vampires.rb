@@ -3,14 +3,23 @@ employees = gets.chomp.to_i
 while employees > 0
   puts "What is your name?"
   name = gets.chomp
-  puts "How old are you? What year were you born?"
+  puts "How old are you?"
   age = gets.chomp.to_i
 
-  if age >= 100
-    age = false;
-  elsif age < 100
-    age = true;
+  puts "What year were you born?"
+  born_year = gets.chomp.to_i
+
+  current_year = age + born_year
+  if current_year != 2017
+    age = false
+  else
+    age = true
   end
+  # if age >= 100
+  #   age = false;
+  # elsif age < 100
+  #   age = true;
+  # end
 
   puts "Our company cafeteria serves garlic bread. Should we order some for you?"
 
@@ -49,7 +58,7 @@ while employees > 0
     puts "Definitely a vampire"
   elsif age && (garlic_bread || insurance)
     puts "Probably not a vampire"
-  elsif age && (garlic_bread || insurance)
+  elsif !age && (garlic_bread || insurance)
     puts "Probably a vampire"
   elsif !age && !garlic_bread && !insurance
     puts "Almost certainly a vampire"
