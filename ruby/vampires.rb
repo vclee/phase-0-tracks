@@ -15,11 +15,6 @@ while employees > 0
   else
     age = true
   end
-  # if age >= 100
-  #   age = false;
-  # elsif age < 100
-  #   age = true;
-  # end
 
   puts "Our company cafeteria serves garlic bread. Should we order some for you?"
 
@@ -40,21 +35,17 @@ while employees > 0
   end
 
   allergies = nil
-
-  while allergies != "done"
+  while allergies != "sunshine"
     puts "name any allergies"
     allergies = gets.chomp
-    if allergies == "sunshine"
-      puts "Probably a vampire"
-      employees -= 1
-      if employees == 0
-        puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
-      end
+    if allergies == "done"
       break
     end
   end
 
-  if name == "Drake Cula" || name == "Tu Fang"
+  if allergies == "sunshine"
+    puts "Probably a vampire"
+  elsif name == "Drake Cula" || name == "Tu Fang"
     puts "Definitely a vampire"
   elsif age && (garlic_bread || insurance)
     puts "Probably not a vampire"
