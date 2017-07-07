@@ -3,15 +3,14 @@
 # Loop through array to see where the number corresponds in the index
 def search_array(arr, n)
   index = 0
-  while index < arr.length
-    if n == arr[index]
-      puts index
-    else
-      p nil
-    end
-    index += 1
 
+  while index < arr.length
+    return index if arr[index] == n
+
+    index += 1
   end
+
+  nil
 end
 
 p search_array([3, 234, 932], 932)
