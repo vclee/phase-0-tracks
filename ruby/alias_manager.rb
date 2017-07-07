@@ -84,7 +84,7 @@ until false
   aliases[name] = secret_spy_name(name)
   puts secret_spy_name(name)
 end
-aliases.each do |key, value|
-  puts "#{key}, aka #{value}"
+aliases.each do |real_name, secret_name|
+  puts "#{real_name}, aka #{secret_name}"
 end
 puts "Goodbye"
