@@ -50,6 +50,21 @@ bmw = Cars.new
 bmw.start_up
 bmw.fill_up(10)
 
+garage = []
+
+50.times do
+  garage.push(porche = Cars.new)
+end
+
+garage.each do |car|
+  car.start_up
+  car.fill_up(10)
+end
+#
+# garage.each do |car|
+#   car.fill_up(10)
+# end
+
 # fido = Puppy.new
 # fido.fetch("ball")
 # fido.speak(4)
