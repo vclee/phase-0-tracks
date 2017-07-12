@@ -30,13 +30,30 @@ class Puppy
 
 end
 
+class Cars
+  def initialize
+    puts "Initialized new instance of Cars!"
+  end
 
+  def start_up
+    puts "VRRROOMMMMM"
+  end
+
+  def fill_up(gallons)
+    puts "Added #{gallons} gallons of gas!"
+    gallons
+  end
+end
 
 #DRIVER CODE **********************
-fido = Puppy.new
-fido.fetch("ball")
-fido.speak(4)
-fido.roll_over
-fido.dog_years(3)
-fido.high_five
-fido.initialize
+bmw = Cars.new
+bmw.start_up
+bmw.fill_up(10)
+
+# fido = Puppy.new
+# fido.fetch("ball")
+# fido.speak(4)
+# fido.roll_over
+# fido.dog_years(3)
+# fido.high_five
+# fido.initialize
