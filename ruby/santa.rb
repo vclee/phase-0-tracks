@@ -1,6 +1,6 @@
 class Santa
-  attr_reader :ethnicity, :age
-  attr_accessor :gender
+  attr_reader :ethnicity
+  attr_accessor :age, :gender
 
   def initialize(gender, ethnicity)
     @gender = gender
@@ -39,7 +39,6 @@ end
 # santas << Santa.new("female", "prefer not to say")
 # santas << Santa.new("gender fluid", "Mystical Creature (unicorn)")
 # santas << Santa.new("N/A", "N/A")
-# p santas
 
 santa = Santa.new("agender", "black")
 santa.get_mad_at("Vixen")
@@ -49,12 +48,17 @@ santa
 
 example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
 example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
-def random_gender_age_ethnicity_generator
-  santa.gender = example_genders.sample
-  santa.ethnicity = example_ethnicities.sample
-  santa.age.rand(0..140)
 
-  santa.gender, santa.ethnicity, santa.age
+def generate_random_santa(genders, ethnicities)
+  gender = genders.sample
+  ethnicity = ethnicities.sample
+
+  santa = Santa.new(gender, ethnicity)
+  santa.age = rand(0..140)
+
+  santa
 end
 
-random_gender_age_ethnicity_generator
+100.times do
+  p generate_random_santa(example_genders, example_ethnicities)
+end
