@@ -1,0 +1,20 @@
+module Flight
+  def take_off(altitude)
+    puts "Taking off and ascending until reaching #{altitude} feet..."
+  end
+end
+
+class Bird
+  include Flight
+end
+
+class Plane
+  include Flight
+end
+
+#DRIVER CODE *******
+bird = Bird.new
+bird.take_off(32000)
+
+plane = Plane.new
+plane.take_off(10000)
