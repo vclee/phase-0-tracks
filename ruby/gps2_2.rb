@@ -17,17 +17,49 @@
   # print the list to the console [can you use one of your other methods here?]
 # output: [what data type goes here, array or hash?] Hash
 
+def create_list(list)
+  grocery_list = {}
+
+  list.split(" ").each do |item|
+    grocery_list[item] = 1
+  end
+
+  grocery_list
+end
+
+grocery_list = create_list("carrots apples cereal")
+
 # Method to add an item to a list
 # input: list, item name, and optional quantity
-# steps: convert item STRING to SYMBOL
-# append list with SYMBOL and quantity as VALUE
+# steps: append list with and quantity as VALUE
 # output: list in HASH form
 #method_add(list, carrot, qty)
+
+def add_item(list, item, qty = 1)
+  list[item] = qty
+
+  list
+end
+
+p add_item(grocery_list, "onion")
+
 
 # Method to remove an item from the list
 # input: list, item name to remove
 # steps: check the KEYs in HASH using destructive method to match and delete
 # output: list in HASH form
+
+def remove_item(list, item)
+  # list.delete_if do |grocery_item, qty|
+  #   grocery_item == item
+  # end
+  list.delete(item)
+
+  list
+end
+
+# remove_item(grocery_list, "orange")
+
 
 # Method to update the quantity of an item
 # input: list, item name to update, qty to remove/add
