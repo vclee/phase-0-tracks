@@ -27,6 +27,7 @@ def create_list(list)
   grocery_list
 end
 
+
 grocery_list = create_list("carrots apples cereal")
 
 # Method to add an item to a list
@@ -60,14 +61,29 @@ end
 
 # remove_item(grocery_list, "orange")
 
-
 # Method to update the quantity of an item
 # input: list, item name to update, qty to remove/add
 # steps: compare each item on list to the item to search for
 # once item is found, update quantity
 # output: list in HASH form
 
+def change_quantity(list, item, qty)
+  list[item] = qty
+  list
+end
+# Think about how to check against user error
+p change_quantity(grocery_list, "cereal", 5)
+
+
 # Method to print a list and make it look pretty
 # input: list
 # steps: convert KEYS to STRINGS and add readable syntax before each VALUE
 # output: list in fancy readable HASH form
+
+def pretty_list(list)
+  list.each do |grocery_item, qty|
+    puts "#{grocery_item}, quantity: #{qty}"
+  end
+end
+
+pretty_list(grocery_list)
