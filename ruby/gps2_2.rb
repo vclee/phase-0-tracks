@@ -87,3 +87,62 @@ def pretty_list(list)
 end
 
 pretty_list(grocery_list)
+
+
+# Release 4: Reflect
+
+# ---What did you learn about pseudocode from working on this challenge?
+
+# I admitted in the beginning of the session that I feel that I can be stronger
+# with my pseudocode. When I am writing pseudocode, sometimes I feel like a line that
+# I want to write would be too simple or too 'plain', and I always want to be more
+# specific. In this GPS session, my pair Sam and I probably were too specific, and
+# we tried to implement and mention certain methods we would use in the pseudocode.
+# Our guide, Davina made a super good point in our feedback. She said that pseudocode
+# should be about what needs to be done, not what you're going to do. And I literally
+# wrote that down on a piece of paper. She says it is more than ok for pseudocode to
+# be super general and simple, and don't worry about the specifics yet.
+
+# ---What are the tradeoffs of using arrays and hashes for this challenge?
+
+# We recognized in the very beginning that a hash would probably be the best data
+# structure to use and would make the most sense. Arrays would not let us store values,
+# whereas a hash has key/value pairs that we could use for our methods that need to associate
+# quantity values to keys.
+
+# ---What does a method return?
+
+# A method can return anything or nothing at all. Ruby's implicit return function
+# allows for the last line of code run to be the return value, so in our grocery list
+# methods, we would often just have the hash return as the last line within our
+# methods. We did not need to have explicit returns in this challenge. Also, some
+# built-in methods have different return values that we have to be aware of, and
+# whether or not they are destructive, such as .each or .split. Our guide pointed
+# out in our list generating method the return value of .split, where we originally
+# had tried to have the passed in argument equal the argument.split. However, it
+# was unnecessary as .split returns a new split array. However, methods like .each
+# do not permanently alter arrays, and the return value is the original array.
+
+# ---What kind of things can you pass into methods as arguments?
+
+  # So far I've seen all the objects and data types that I've encountered so far
+  # have been used to pass into methods, ie. arrays, hashes, strings, integers,
+  # booleans, even other methods.
+
+# ---How can you pass information between methods?
+
+  # The hint in this challenge said we might need to pass methods into methods,
+  # but we ended up not having to. You can nest methods within each other, or call
+  # a method from within a method, but be mindful of the return values. I've been
+  # a victim of not realizing the return of one method was nil, as I tried calling
+  # it or passing it in another array.
+
+# ---What concepts were solidified in this challenge, and what concepts are still confusing?
+
+# I fully expected that we would have to manipulate arrays and hashes and how to
+# access certain element types. I would've liked to have had more practice with arrays
+# in hashes, and how to access certain nested elements, and mindful of whether the
+# return is array or key or whatever, etc. I think the interview questions for DBC
+# was about that. I'm now more confident with accessing hashes and key/values and
+# how to update them after this challenge. It ended up being a lot easier than I
+# anticipated.
