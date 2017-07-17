@@ -22,8 +22,28 @@ function findKeyValueMatch(obj1, obj2) {
   return false;
 }
 
+function generateRandomWords(numberOfWords) {
+  var randomWords = [];
+  var str = "";
+  var characters = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+  for (var i = 0; i < numberOfWords; i++) {
+    var randomLength = Math.floor(Math.random() * (11 - 1) + 1);
+
+    for (var j = 0; j < randomLength; j++) {
+      str += characters[Math.floor(Math.random() * characters.length)];
+    }
+
+    randomWords.push(str);
+  }
+
+  return randomWords;
+}
+
+
 // DRIVER CODE *********
 // var longWords = ["apple", "cat", "Mississippi"];
 // console.log(findLongestWord(longWords));
-console.log(findKeyValueMatch({name: "Steven", age: 54}, {name: "Tamir", age: 54}));
-console.log(findKeyValueMatch({animal: "Dog", legs: 4}, {animal: "Dog", legs: 3}));
+// findKeyValueMatch({name: "Steven", age: 54}, {name: "Tamir", age: 54});
+// findKeyValueMatch({animal: "Dog", legs: 4}, {animal: "Dog", legs: 3});
+console.log(generateRandomWords(4))
