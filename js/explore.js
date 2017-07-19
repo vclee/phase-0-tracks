@@ -17,6 +17,8 @@ var reverse = function(word) {
   return reversedWord;
 }
 
+// DRIVER CODE ******
+
 if (1 === 1) {
   console.log(reverse("foobar"));
 }
