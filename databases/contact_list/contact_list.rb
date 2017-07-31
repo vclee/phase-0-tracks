@@ -59,12 +59,15 @@ until answer == "exit"
     puts "\nWhat is the last name of the contact you want to modify?"
     l_name = gets.chomp
 
+    puts "\nWhat is the first name of the contact you want to modify?"
+    f_name = gets.chomp
+
     puts "\nWhat is their new phone number?"
     new_num = gets.chomp
 
-    found = contact_list(db).find { |contact| contact['last_name'] == l_name }
+    found = contact_list(db).find { |contact| contact['last_name'] == l_name && contact['first_name'] == f_name }
     if found
-      db.execute("UPDATE contacts SET phone_number='#{new_num}' WHERE last_name='#{l_name}'")
+      db.execute("UPDATE contacts SET phone_number='#{new_num}' WHERE last_name='#{l_name}' AND first_name='#{f_name}'")
     else
       puts "\nContact doesn't exist."
     end
@@ -72,6 +75,7 @@ until answer == "exit"
   elsif answer == "remove"
     puts "\nWhat is the last name of the contact you want to remove?"
     l_name = gets.chomp
+
     puts "\nWhat is the first name of the contact you want to remove?"
     f_name = gets.chomp
 
