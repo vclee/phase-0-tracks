@@ -1,3 +1,5 @@
+RELEASE 0:
+
 1. What are some common HTTP status codes?
 
 Status codes are 3 digit numbers that represent the response to a request.
@@ -20,3 +22,8 @@ sensitive information. GET should only retrieve data and should not have effect
 on the data. POST is used to send data to the server, such as file uploads.
 
 3. Optional bonus question: What is a cookie (the technical kind, not the delicious kind)? How does it relate to HTTP requests?
+
+Cookies are bits of information that the server sends to the user browser, that
+is then relayed back to see if it's from the same server. Cookies are used for
+session management of things that the server should remember (logins), personalization
+of settings and themes, and tracking and analyzing user behavior.
