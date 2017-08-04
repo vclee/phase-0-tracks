@@ -24,4 +24,10 @@ post '/students' do
   redirect '/'
 end
 
+# display a single student's information
+get '/student/:id' do
+  @student = db.execute("SELECT * FROM students WHERE id = ?", params[:id]).first
+  erb :student
+end
+
 # add static resources
