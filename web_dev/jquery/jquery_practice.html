@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+    <h1>This is some SUPER basic jQuery stuff</h1>
+    </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $("button").click(function(){
+        $("#poof").css("color", "#00ff99").fadeToggle();
+      });
+    });
+
+    </script>
+  </head>
+  <body>
+    <p>Press the magic button to make some magic!</p>
+    <p id = "poof">*****POOOF*****</p>
+    <button>*** MAGIC BUTTON ***</button>
+  </body>
+</html>
